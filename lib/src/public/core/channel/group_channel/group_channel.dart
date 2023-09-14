@@ -79,7 +79,7 @@ part 'group_channel_typing.dart';
 part 'package:sendbird_chat_sdk/src/internal/main/extensions/group_channel_extensions.dart';
 
 /// Represents a group channel.
-@JsonSerializable(createToJson: false)
+@JsonSerializable(createToJson: true)
 class GroupChannel extends BaseChannel {
   /// The last message of the channel.
   BaseMessage? lastMessage;
@@ -192,7 +192,7 @@ class GroupChannel extends BaseChannel {
   @JsonKey(name: 'latest_pinned_message')
   BaseMessage? lastPinnedMessage;
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(includeFromJson: true, includeToJson: true)
   int pinnedMessageUpdatedAt;
 
   int _lastStartTypingTimestamp;
